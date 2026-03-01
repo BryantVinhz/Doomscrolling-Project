@@ -29,8 +29,7 @@ while True:
                 mp_face_mesh.FACEMESH_TESSELATION
             )
 
-            # Test số điểm
-            print(len(face_landmarks.landmark))  # phải ra 468
+            print(len(face_landmarks.landmark))
 
     cv2.imshow("Face Mesh", frame)
 
