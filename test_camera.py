@@ -9,7 +9,7 @@ while True:
 
     cv2.imshow("Camera Test", frame)
 
-    if cv2.waitKey(1) & 0xFF == 27:  # nhấn ESC để thoát
+    if cv2.waitKey(1) & 0xFF == 27:  
         break
 
 cap.release()
