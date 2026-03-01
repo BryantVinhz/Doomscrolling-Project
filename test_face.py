@@ -28,7 +28,7 @@ while True:
                 face_landmarks,
                 mp_face_mesh.FACEMESH_TESSELATION
             )
-
+            
             print(len(face_landmarks.landmark))
 
     cv2.imshow("Face Mesh", frame)
