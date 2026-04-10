@@ -35,7 +35,7 @@ with mp_face_mesh.FaceMesh(
                 mp_draw.draw_landmarks(
                     image=frame,
                     landmark_list=face_landmarks,
-                    connections=mp_face_mesh.FACEMESH_IRISES,
+                    connections=mp_face_mesh.FACEMESH_CONTOURS,
                     landmark_drawing_spec=draw_spec,
                     connection_drawing_spec=draw_spec,
                 )
