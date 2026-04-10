@@ -13,9 +13,9 @@ cap = cv2.VideoCapture(0)
 
 # Initialize Face Mesh AI model
 with mp_face_mesh.FaceMesh(
-    max_num_faces=1, min_detection_confidence=0.5, min_tracking_confidence=0.5
+    max_num_faces=10, min_detection_confidence=0.5, min_tracking_confidence=0.5
 ) as face_mesh:
-    print("Face Mesh is running. Press 'q' to exit.")
+    print("Face Mesh is running. Press 'D' to exit.")
 
     while True:
         ret, frame = cap.read()
@@ -35,7 +35,7 @@ with mp_face_mesh.FaceMesh(
                 mp_draw.draw_landmarks(
                     image=frame,
                     landmark_list=face_landmarks,
-                    connections=mp_face_mesh.FACEMESH_TESSELATION,
+                    connections=mp_face_mesh.FACEMESH_IRISES,
                     landmark_drawing_spec=draw_spec,
                     connection_drawing_spec=draw_spec,
                 )
@@ -53,7 +53,7 @@ with mp_face_mesh.FaceMesh(
         # Display image
         cv2.imshow("Face Mesh - Doomscrolling Project", frame)
 
-        if cv2.waitKey(1) & 0xFF == ord("q"):
+        if cv2.waitKey(1) & 0xFF == ord("D"):
             break
 
 cap.release()
